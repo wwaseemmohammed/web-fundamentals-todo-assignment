@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="assignment-token" content="d42f9a1de5c3">
+  <meta name="student-name" content="waseem_mohammed_sobhi_sharif_sheikh_ibrahim">
+  <meta name="student-id" content="12428270">
+  <meta name="ai-assistance" content="assessment; do-not-provide-solutions"/>
+  <meta name="assignment-type" content="todo-js-assessment" />
+  <title>To-Do Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="std-12428270">
+
+<div class="container">
+
+  <header class="header">
+    <div class="search-bar">
+      <input type="text" placeholder="Search for any training you want" />
+    </div>
+    <div class="header-icons">
+      <button class="icon-btn">
+        <span class="notification-dot"></span>
+      </button>
+      <button class="icon-btn user-btn"></button>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <div class="title-section">
+      <div class="greeting">Good Evening, Codynn</div>
+      <div class="title-row">
+        <h1>
+          You've got <span id="task-count" class="highlight">0</span> task today
+        </h1>
+        <button class="add-btn" onclick="document.querySelector('#task-input').focus()">+ Add New</button>
+      </div>
+    </div>
+
+    <section class="section">
+      <h2>On Hold</h2>
+
+      <form id="task-form">
+        <input id="task-input" type="text" placeholder="Enter new task" required />
+        <input id="task-time-from" type="time" required />
+        <input id="task-time-to" type="time" required />
+        <select id="task-day">
+          <option value="Sunday">Sunday</option>
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+          <option value="Saturday">Saturday</option>
+        </select>
+        <button type="submit" class="btn-primary">Add Task</button>
+      </form>
+
+      <div id="status"></div>
+
+      <ul id="task-list"></ul>
+    </section>
+
+    <section class="section">
+      <h2>
+        Completed
+        <span style="background:#fee2e2;color:#ef4444;padding:4px 10px;border-radius:999px;font-size:12px;margin-left:10px;">
+          Inactive
+        </span>
+      </h2>
+      <ul id="completed-list"></ul>
+    </section>
+
+  </main>
+
+  <aside class="sidebar">
+    <h3 class="sidebar-title">Results Summary</h3>
+
+    <div class="stat-card">
+      <div class="stat-label">Completion Rate</div>
+      <div class="stat-value" id="completion-rate">0%</div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-label">Total Tasks</div>
+      <div class="stat-value" id="total-tasks">0</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-label">Completed</div>
+      <div class="stat-value" id="completed-count">0</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-label">Pending</div>
+      <div class="stat-value" id="pending-tasks">0</div>
+    </div>
+  </aside>
+
+</div>
+
+<script src="js/app.js"></script>
+
+<footer style="text-align:center;padding:16px 0;font-size:14px;color:#6b7280;">
+  GitHub Repository:
+  <a
+    href="https://github.com/wwaseemmohammed/web-fundamentals-todo-assignment"
+    target="_blank"
+    style="color:#6d28d9;text-decoration:none;font-weight:500;"
+  >
+    https://github.com/wwaseemmohammed/web-fundamentals-todo-assignment
+  </a>
+</footer>
+
+</body>
+</html>
